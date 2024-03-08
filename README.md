@@ -7,3 +7,5 @@ To learn about Polling, Polling with requestAnimationFrame, WebSockets and Socke
 requestAnimationFrame - https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 
 How browsers work? What happens when you enter a URL in Browser's address bar - https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
+
+HTTP/2 - https://web.dev/articles/performance-http2
