@@ -8,4 +8,11 @@ requestAnimationFrame - https://developer.mozilla.org/en-US/docs/Web/API/window/
 
 How browsers work? What happens when you enter a URL in Browser's address bar - https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
 
-HTTP/2 - https://web.dev/articles/performance-http2
+HTTP/2 -
+ - Prioritization
+ - Multiplexing
+ - Server Push
+ - Header Compression (Using HPACK Compression by removing redundant bytes.)
+
+   
+https://web.dev/articles/performance-http2
