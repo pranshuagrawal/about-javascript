@@ -60,3 +60,40 @@ https://www.cloudflare.com/learning/dns/what-is-dns/
 - Header Compression (Using HPACK Compression by removing redundant bytes.)
 
 https://web.dev/articles/performance-http2
+
+
+## Frontend Monitoring
+
+window.requestIdleCallback to be used to make sure callbacks are called during browser's idle periods.
+
+| Common Fields | Source|
+|--------|--------|
+| Battery Details | navigator.getBattery |
+| Browser and OS Details | navigator.userAgent |
+| Device Type (Mobile or Not) | Navigator.userAgent |
+| Current Location | navigator.geoLocation.getCurrentLocation() |
+| Network Speed | navigator.connection.downlink |
+| Network Type (slow-2g, 2g, 3g, or 4g) | navigator.connection.effectiveType |
+| Page URL | window.location.href |
+| Timestamp | new Date().toISOString() |
+
+### API Log
+
+By overriding open, send and setRequest Header methods of XMLHTTPRequest
+
+And window.fetch method. Calculated fields are
+
+- Header Lenght
+- Body Length
+- Method
+- Response type
+- Type (Success/ Failure)
+- Error Code
+- Error Message
+- Endpoint
+- Hostname
+
+### JS Error
+
+By window.addEventListener("error", handler) and using window.requestIdleCallback to do the processing of the error.
+
