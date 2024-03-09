@@ -97,3 +97,12 @@ And window.fetch method. Calculated fields are
 
 By window.addEventListener("error", handler) and using window.requestIdleCallback to do the processing of the error.
 
+### Performance
+
+Performance details like redirectEnd, domainLookupEnd, connectEnd, responseStart, domComplete, domeInteractive are fetched using performance API using `window.performance.getEntriesByType('navigation')[0]`
+
+And then individual values are calculated by subtracting the previous values.
+
+Everything is again performed in requireIdleCallback.
+
+Times are calculated using `window.performance.now()`;
