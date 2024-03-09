@@ -10,6 +10,7 @@ How browsers work? What happens when you enter a URL in Browser's address bar - 
 
 How does DNS Resolution works? https://www.cloudflare.com/learning/dns/what-is-dns/
 
+[![](https://cf-assets.www.cloudflare.com/slt3lc6tev37/3NOmAzkfPG8FTA8zLc7Li8/8efda230b212c0de2d3bbcb408507b1e/dns_record_request_sequence_recursive_resolver.png)](https://cf-assets.www.cloudflare.com/slt3lc6tev37/3NOmAzkfPG8FTA8zLc7Li8/8efda230b212c0de2d3bbcb408507b1e/dns_record_request_sequence_recursive_resolver.png)### Features
 
 
 HTTP/2 -
