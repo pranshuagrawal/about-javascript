@@ -14,6 +14,9 @@ https://atomicdesign.bradfrost.com/chapter-2/#:~:text=Atoms%20are%20UI%20element
 
 ![](https://atomicdesign.bradfrost.com/images/content/atomic-design-process.png)
 
+### Micro Frontend Architecture
+https://www.youtube.com/watch?v=lKKsjpH09dU&t=392s
+
 ### How browsers work?
 
 https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
