@@ -8,6 +8,12 @@ https://btholt.github.io/complete-intro-to-realtime/
 ### requestAnimationFrame
 https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 
+
+### Frontend Atomic Design
+https://atomicdesign.bradfrost.com/chapter-2/#:~:text=Atoms%20are%20UI%20elements%20that,discrete%20sections%20of%20an%20interface.
+
+![](https://atomicdesign.bradfrost.com/images/content/atomic-design-process.png)
+
 ### How browsers work?
 
 https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
