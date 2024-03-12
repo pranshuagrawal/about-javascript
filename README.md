@@ -16,6 +16,33 @@ https://atomicdesign.bradfrost.com/chapter-2/#:~:text=Atoms%20are%20UI%20element
 
 ### Micro Frontend Architecture
 https://www.youtube.com/watch?v=lKKsjpH09dU&t=392s
+https://single-spa.js.org/docs/getting-started-overview - Nicer way of handling micro frontend across platform
+https://bit.dev/
+
+<pre>
+new ModuleFederationPlugin({
+  name: "home",
+  filename: "remoteEntry.js",
+  remotes: {}, // Add remote in the child pages
+  exposes: {
+    "./Header": "./src/Header",
+    "./Footer": "./src/Footer",
+  }, // What the parent is exposing
+  shared: {
+    ...deps,
+    react: {
+      singleton: true,
+      requiredVersion: deps.react,
+    },
+    "react-dom": {
+      singleton: true,
+      requiredVersion: deps["react-dom"],
+    },
+  },
+}),
+</pre>
+
+
 
 ### How browsers work?
 
@@ -115,3 +142,8 @@ And then individual values are calculated by subtracting the previous values.
 Everything is again performed in requireIdleCallback.
 
 Times are calculated using `window.performance.now()`;
+
+### Testing
+
+End to end testing - Cypress (Screen record to fetch the event using cypress chrome extension and add in the file e2e_spec.js and run cypress test)
+
