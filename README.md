@@ -147,3 +147,87 @@ Times are calculated using `window.performance.now()`;
 
 End to end testing - Cypress (Screen record to fetch the event using cypress chrome extension and add in the file e2e_spec.js and run cypress test)
 
+### Page Weight
+https://almanac.httparchive.org/en/2020/page-weight#fig-2
+
+
+### Frontend Performance
+
+- Bundle Splitting
+  - Loading pattern is Loading Script > Parsing Script > Compiling Script > Executing Script > FCP > LCP > TTI
+- Compressing Javascript
+  - Brottli has higher compression ratio than Gzip [BrotliWebpackPlugin - Static Compression at build time]
+  - HTTP Compression
+  - Static Compression when resource is compressed in build time, higher compression. Dynamic Compression when resources are compressed on the fly, lower compressions as higher compression will take more time to do.
+  - Can be checked using content-encoding header. content-encoding: br
+- Dyamic Import using React lazy and suspense
+- Import on Interaction 
+  - Google drive share button
+  - Youtube rendering a play icon and once clicked it loads the player
+  - Sign In With Goggle
+  - Chat widgets
+- Import On Visibility
+- Optimise Loading Sequence
+  - By the time FCP fires, the hero image should be available for firing LCP.
+  - By the time LCP fires, the JavaScript (JS) should be downloaded, parsed and ready (or already executing) to unblock interaction (FID).
+  - Full Network/ CPU Utilisation - if you download the scripts sequentially, the CPU can start processing the first one as soon as it is downloaded. This results in better CPU and Network utilization.
+  - Load critical CSS First (preload) required for FCP.
+  - Preconnect the font domains
+  - Load Above the fold images first (visible to the user on first render) (preconnect if external)
+    - Parse the HTML	
+    - Parse FCP resources (critical CSS, font)	
+    - First Contentful Paint (FCP)	
+    - Render LCP resources (Hero image, text)	
+    - Largest Contentful Paint (LCP)	
+    - Render important ATF images	
+    - Parse Non-critical (async) CSS	
+    - Execute 1P JS and hydrate	
+    - First Input Delay (FID)	
+- Prefetch - 
+  - Magic Comment - `const EmojiPicker = import(/* webpackPrefetch: true */ "./EmojiPicker");`
+  - 
+
+- Web Accessibility
+  - 30 A Criteria, 20 AA Criteria, 28 AAA Criteria
+  - Perceivable, Operable, Understandable, and Robust (POUR)
+  - Perceivable
+    - This principle states that users must be able to perceive all essential information on the screen, and it must be conveyed to multiple senses.
+    - Adding text alternatives to all non-decorative images and essential icons.
+    - Adding captions, transcripts, and audio descriptions to videos.
+    - Ensuring color is not the only method of conveying meaning.
+  - Operable
+    - For this principle, users must be able to operate the digital product's interface. The interface cannot require interaction that a user cannot perform.
+    - Adding keyboard and touchscreen support to all active elements.
+    - Ensuring slideshows and videos have all of the necessary controls available.
+    - Giving users enough time to fill out a form or a method to extend the time.
+  - Understandable
+    - For this principle, users must understand the information and the operation of the user interface.
+    - Writing simply—don't use a complex word when a simple one will do.
+    - Ensuring your digital product has predictable navigation.
+    - Ensuring error messages are clear and easy to resolve.
+  - Robust
+    - This principle focuses on supporting assistive technologies and ensuring that, as devices and user agents evolve, the digital product remains accessible.
+    - Testing keyboard-only navigation.
+    - Testing with different screen reader technologies.
+    - Ensuring all of the content and functionality can be accessed, regardless of device size or orientation.
+  - Aria Attributes (role, aria-describedby, aria-pressed, aria-label, aria-hidden etc) 
+  - Content Structure and Semantic HTML
+    - Use elements like Nav, Header, Table with th and td, Main etc.
+  - Document
+    - Title
+    - lang="en" in html tag
+    - lang="et" in inside sections if applicable
+    - title in iframe tag
+  - Keyboard Focus
+    - tabindexes - use with caution
+    - Add skip to main content so that user doesnt have to navigate through a lot of main menu links.
+    - Focus Styling
+  - Javascript
+    - Dont use onClick on div. Keyboard functionality is not automatically applied to it. Use button instead.
+    - Use aria-expanded or aria-collapsed when programatically expanding or collapsing a list.
+  - Images
+    - Use alt attribute on the images
+  - Forms
+    - Use labels on input `<label for="input">`
+    - Add aria-describedby="tel-validation" on label this links the description with the label
+    - Error Handling. Use required attribute, aria-required
