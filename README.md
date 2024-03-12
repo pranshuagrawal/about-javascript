@@ -231,3 +231,7 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
     - Use labels on input `<label for="input">`
     - Add aria-describedby="tel-validation" on label this links the description with the label
     - Error Handling. Use required attribute, aria-required
+      
+
+### Javascript Polyfills
+ - Implement Custom Promise [Implementation](custom-promise.js)
