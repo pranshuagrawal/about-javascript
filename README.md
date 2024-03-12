@@ -248,3 +248,4 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
 - Interaction to Next Paint <200ms is good.
 
 ### Implement Custom Promise
+[Solution](solution/custom-promise.js)
