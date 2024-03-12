@@ -249,3 +249,19 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
 
 ### Implement Custom Promise
 [Solution](solution/custom-promise.js)
+
+### How v8 Works
+
+https://dev.to/lydiahallie/javascript-visualized-the-javascript-engine-4cdf
+
+- The HTML parser encounters a script tag
+- Response is the requested script as a stream of bytes
+- Byte stream decoder decodes the stream of bytes as it’s being downloaded.
+- Byte stream decoder creates tokens from the decoded stream of bytes
+- For example, 0066 decodes to f, 0075 to u, 006e to n, 0063 to c, 0074 to t, 0069 to i, 006f to o, and 006e to n followed by a white space. Seems like you wrote function
+- This is a reserved keyword in JavaScript, a token gets created, and sent to the parser
+- The parser creates nodes based on the tokens it receives from the byte stream decoder.
+- With these nodes, it creates an Abstract Syntax Tree, or AST.
+- Interpreter which walks through the AST, and generates byte code
+- Once the byte code has been generated fully, the AST is deleted, clearing up memory space
+- The optimizing compiler takes the byte code and type feedback, and generates highly optimized machine code from these.
