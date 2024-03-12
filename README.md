@@ -240,3 +240,9 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
 - Akamai
 - SQL Injections - ORM handles it internally.
 - nonce
+
+### Web Vitals
+- LCP <2.5s good >4s poor
+- FID  <100ms is good
+- CLS <0.1 is good (impact fraction*distance fraction)
+- Interaction to Next Paint <200ms is good.
