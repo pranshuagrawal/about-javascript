@@ -239,4 +239,4 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
 - XSRF - xsrf token header is appended to each request. on backend it is stored on session.
 - Akamai
 - SQL Injections - ORM handles it internally.
-- 
+- nonce
