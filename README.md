@@ -231,7 +231,12 @@ https://almanac.httparchive.org/en/2020/page-weight#fig-2
     - Use labels on input `<label for="input">`
     - Add aria-describedby="tel-validation" on label this links the description with the label
     - Error Handling. Use required attribute, aria-required
-      
-
-### Javascript Polyfills
- - Implement Custom Promise [Implementation](custom-promise.js)
+  
+### Security
+- Content Security Policy - What content can be loaded, which hosts and which protocl.
+- frame-ancestory policy
+- XSS - Compares the length of string without html entities and see if anything is malicious there.. 
+- XSRF - xsrf token header is appended to each request. on backend it is stored on session.
+- Akamai
+- SQL Injections - ORM handles it internally.
+- 
