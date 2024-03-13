@@ -139,6 +139,21 @@ Performance details like redirectEnd, domainLookupEnd, connectEnd, responseStart
 
 And then individual values are calculated by subtracting the previous values.
 
+<pre>
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const request = entry.responseStart - entry.requestStart;
+    if (request > 0) {
+      console.log(`${entry.name}: Request time: ${request}ms`);
+    }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+</pre>
+
+[PerformanceObserver API](!https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Resource_timing) is used to understand the performance of new resources.
+
 Everything is again performed in requireIdleCallback.
 
 Times are calculated using `window.performance.now()`;
